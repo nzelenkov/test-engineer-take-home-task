@@ -2,6 +2,12 @@
 This is a solution for the following take home task 
 https://github.com/mxinden/test-engineer-take-home-task/blob/master/README.md
 
+# Features:
+- Configuration with EVN vars suitable for CI/CD pipelines
+- Wrap makefile for easy deployment
+- Kubernetes deployment with helm chart
+- Slim docker image - 7.2Mb
+
 # System requirements
 - Docker engine
 - Kubernetes cluster
