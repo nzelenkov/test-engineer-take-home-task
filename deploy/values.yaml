@@ -1,0 +1,25 @@
+replicaCount: 1
+
+image:
+  repository: ""
+  tag: ""
+  pullPolicy: IfNotPresent
+
+test:
+  name: ""
+  timeout: 10 
+  image:
+    repository: ""
+    tag: ""
+  
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  name:
+
+service:
+  type: ClusterIP
+  port: 
+  prot: http

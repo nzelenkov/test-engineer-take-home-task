@@ -1,0 +1,5 @@
+************************************
+Substrate deployment to k8s launched
+************************************
+This deployment runs until the Subsrate block height reaches 10.
+When tests is PASSED the deployment is deleted and resources released.

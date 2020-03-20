@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "deploy.fullname" . }}-test-block-height"
+  labels:
+{{ include "deploy.labels" . | indent 4 }}
+  annotations:
+    "helm.sh/hook": test-success
+spec:
+  containers:
+    - name: substrate-test
+      image: "{{ .Values.test.image.repository }}:{{ .Values.test.image.tag }}"
+      args: ["{{ .Values.test.name }}","-prot={{ .Values.service.prot }}","-host={{ include "deploy.fullname" . }}","-port={{ .Values.service.port }}","-timeout=10"]
+  restartPolicy: Never
